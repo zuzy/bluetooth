@@ -80,7 +80,7 @@ static void timer0_init(void)
 
     // Configure TIMER0 for compare[0] event every 200 ms.
     NRF_TIMER0->PRESCALER = 4;                // Prescaler 4 results in 1 tick equals 1 microsecond.
-    NRF_TIMER0->CC[0]     = 200*1000UL;       // 1 tick equals 1ï¿½ , multiply by 1000 for ms value.
+    NRF_TIMER0->CC[0]     = 200*1000UL;       // 1 tick equals 1µ , multiply by 1000 for ms value.
     NRF_TIMER0->MODE      = TIMER_MODE_MODE_Timer;
     NRF_TIMER0->BITMODE   = TIMER_BITMODE_BITMODE_24Bit;
     NRF_TIMER0->SHORTS    = (TIMER_SHORTS_COMPARE0_CLEAR_Enabled << TIMER_SHORTS_COMPARE0_CLEAR_Pos);
@@ -104,4 +104,3 @@ int main(void)
     }
 }
 /** @} */
-
